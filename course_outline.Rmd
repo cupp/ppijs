@@ -1,0 +1,57 @@
+---
+title: "Programming Principles I with JavaScript"
+subtitle: "Course Outline"
+author: "Brad Cupp"
+date: "Fall 2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Week One
+#### Monday
+* Syllabus highlights (20 min.)
+* Definitons of language and grammar (20 min.)
+    + [Languages and Grammar (pdf)](https://www.cslab.pepperdine.edu/cupp/textbook/cfqtCh02.pdf)
+    + slides
+* Grammar A--Identifiers (10 min.)
+    + Is $b$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{15}$
+    + Is $d$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{\text{invalid}}$
+    + Is $abc$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{221456}$
+    + Is $cb3$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{321659}$
+    + Is $2b$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{\text{invalid}}$
+    + Is $ab12c$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{2332145786}$
+
+#### Tuesday
+* Grammar A review (5 min.)
+* Grammar B--Signed Integers (10 min.)
+    + Definition of leftmost derivation
+    
+        > A *leftmost derivation* of a string is a derivation
+        > in which symbols to the left in the syntax tree
+        > are expanded before symbols to the right in the 
+        > syntax tree, and the rule number invoked for each
+        > expansion is recorded.
+    
+    + Is $+d$ a valid identifier by grammar B? If so, give the leftmost derivation. $\color{red}{126}$
+    + Is $-dddd$ a valid identifier by grammar B? If so, give the leftmost derivation. $\color{red}{135556}$
+    + Is $ddd$ a valid identifier by grammar B? If so, give the leftmost derivation. $\color{red}{14556}$
+    + Give an example of a string that is invalid by grammar B. $\color{red}{b, ddd+, d+d, etc.}$
+* Grammar C--Context-Sensitive Grammar (15 min.)
+    + Is $abc$ a valid string by Grammar C? If so, give the leftmost derivation. $\color{red}{25}$
+    + Is $aabbcc$ a valid string by Grammar C? If so, give the leftmost derivation. $\color{red}{123456}$
+    + Is $aaabbbccc$ a valid string by Grammar C? If so, give the leftmost derivation. $\color{red}{11233344566}$
+    + What language does grammar C recognize? $\color{red}{\text{strings of the form } a^nb^nc^n\text{ for }n > 0}$
+* Grammar D--Expressions (20 min.)
+    + Is $a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{246}$
+    + Is $a + a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{124646}$
+    + Is $a * a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{23466}$
+    + Is $a + a * a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{12463466}$
+    + Is $(a * a)$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{24523466}$
+    + Is $a * (a * a + a) + a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{1234651234664646}$
+    
+#### Thursday
+* Review Grammar D (5 min.)
