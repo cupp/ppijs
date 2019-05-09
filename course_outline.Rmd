@@ -54,4 +54,25 @@ knitr::opts_chunk$set(echo = TRUE)
     + Is $a * (a * a + a) + a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{1234651234664646}$
     
 #### Thursday
-* Review Grammar D (5 min.)
+* Review of grammars / questions from homework (10 min.)
+* Brief introduction to VS Code (5 min.)
+* JavaScript literals
+
+    > A *literal* is an atomic value that can be used in a JavaScript expression
+    
+    + Attributes of a literal (at any point in time a literal has a ...)
+        1. type
+        2. value
+    + Types
+        + number (i.e. 4, -32, 3.14159)
+        + string (i.e. 'bird', 'c', 'Pepperdine University')
+        + boolean (i.e. true, false)
+        + function (Math.sqrt, console.log)
+* JavaScript variables
+    + Attributes of a variable (at any point in time a variable has a ...)
+        1. name
+        2. type
+        3. value
+    + Assignment
+        - `let x = 4;`
+        - Read as "let x get 4"
