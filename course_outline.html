@@ -255,8 +255,8 @@ $(document).ready(function () {
 <div id="thursday" class="section level4">
 <h4>Thursday</h4>
 <ul>
-<li>Review of grammars / questions from homework (10 min.)</li>
-<li>Brief introduction to VS Code (5 min.)</li>
+<li>Review of grammars / questions from homework, J1 due (10 min.)</li>
+<li>Brief introduction to VS Code, emphasis on console (5 min.)</li>
 <li><p>JavaScript literals</p>
 <blockquote>
 <p>A <em>literal</em> is an atomic value that can be used in a JavaScript expression</p>
@@ -269,10 +269,14 @@ $(document).ready(function () {
 </ol></li>
 <li>Types
 <ul>
-<li>number (i.e. 4, -32, 3.14159)</li>
+<li>number (i.e. 4, -32, 3.14159)
+<ul>
+<li>typeof operator (unary prefix)</li>
+<li><code>typeof 8</code></li>
+</ul></li>
 <li>string (i.e. ‘bird’, ‘c’, ‘Pepperdine University’)</li>
 <li>boolean (i.e. true, false)</li>
-<li>function (Math.sqrt, console.log)</li>
+<li>function (Math.sqrt, console.log, <strong>Note: these are not literals. We’ll learn about function literals later </strong>)</li>
 </ul></li>
 </ul></li>
 <li>JavaScript variables
@@ -283,13 +287,141 @@ $(document).ready(function () {
 <li>type</li>
 <li>value</li>
 </ol></li>
+<li>Variables in math (free to take any value) vs. variables in programming (bound to a single value)</li>
 <li>Assignment
 <ul>
 <li><code>let x = 4;</code></li>
 <li>Read as “let x get 4”</li>
+<li><code>let</code> only used on first occurrence of variable</li>
+<li>Subsequent usage: <code>x = 3</code> (“x gets 3”) changes value of <code>x</code></li>
+<li>Lefthand side of assignment must be a single variable</li>
+<li>Righthand side can be any expression</li>
+<li>Type of variable is inferred from expression
+<ul>
+<li>can change in standard JavaScript</li>
+<li>cannot change in TypeScript</li>
 </ul></li>
 </ul></li>
+<li>Constants
+<ul>
+<li><code>const TAX_RATE = 0.095;</code></li>
+<li>Same as <code>let</code> but TAX_RATE cannot be changed</li>
+<li>All caps is standard convention for names of constants</li>
+<li><code>var x = 4;</code> is for backwards compatibility, do not use</li>
+</ul></li>
+</ul></li>
+<li>Arithmetic Operators (in order of precedence)
+<ul>
+<li>unary plus <code>+</code>, unary negation <code>-</code></li>
+<li>multiplication <code>*</code>, division <code>\</code>, modulus <code>%</code></li>
+<li>addition <code>+</code>, subtraction <code>-</code>
+<ul>
+<li>Note: no exponentiation operator, use <code>Math.pow(x, 2)</code></li>
+<li>Note: no integer division operator, use <code>Math.floor(x / 2)</code>, see next lecture</li>
+</ul></li>
+</ul></li>
+<li><p>First programs</p></li>
 </ul>
+<hr />
+<div id="hello.ts" class="section level6">
+<h6>hello.ts</h6>
+<p>Write a program that prints the string <code>Hello, world!</code> to the console.</p>
+<pre class="js"><code>console.log(&quot;Hello, world!\n&quot;);</code></pre>
+<script type="text/javascript">
+console.log("Hello, world!\n");
+</script>
+<hr />
+</div>
+<div id="rectangle.ts" class="section level6">
+<h6>rectangle.ts</h6>
+<p>Write a program that computes and prints the area and perimeter of a rectangle with variable length and width to the console.</p>
+<pre class="js"><code>  let length = 4.2;
+  let width = 5.8;
+  let area = length * width;
+  let perimeter = 2.0 * (length + width);
+  console.log(&quot;Area = &quot; + area.toFixed(1));
+  console.log(&quot;Perimeter = &quot; + perimeter.toFixed(1));</code></pre>
+<script type="text/javascript">
+  let length = 4.2;
+  let width = 5.8;
+  let area = length * width;
+  let perimeter = 2.0 * (length + width);
+  console.log("Area = " + area.toFixed(1));
+  console.log("Perimeter = " + perimeter.toFixed(1));
+</script>
+</div>
+</div>
+</div>
+<div id="week-two" class="section level3">
+<h3>Week Two</h3>
+<div id="monday-1" class="section level4">
+<h4>Monday</h4>
+<ul>
+<li>Labor Day (no class)</li>
+</ul>
+</div>
+<div id="tuesday-1" class="section level4">
+<h4>Tuesday</h4>
+<ul>
+<li>Integer arithmetic
+<ul>
+<li>integer division <code>Math.floor(32 / 5)</code></li>
+<li>modulus operator <code>32 % 5</code></li>
+</ul></li>
+<li>User-defined functions
+<ul>
+<li>Function syntax</li>
+<li>Function literals</li>
+</ul></li>
+<li>Sample code</li>
+</ul>
+<hr />
+<div id="rectanglefunctions.ts" class="section level6">
+<h6>rectangleFunctions.ts</h6>
+<pre class="js"><code>function area(length: number, width: number): number {
+  return length * width;
+}
+
+function perimeter(length: number, width: number): number {
+  return 2.0 * (length + width);
+}
+
+function describeRectangle(length: number, width: number): void {
+  console.log(&quot;length: &quot; + length.toFixed(1));
+  console.log(&quot;width: &quot; + width.toFixed(1));
+  console.log(&quot;area: &quot; + area(length, width).toFixed(2));
+  console.log(&quot;perimeter: &quot; + perimeter(length, width).toFixed(2));
+  console.log();
+}
+
+describeRectangle(3.0, 4.0);
+describeRectangle(8.6, 5.1);
+describeRectangle(13.2, 2.5);</code></pre>
+<script type="text/javascript">
+function area(length: number, width: number): number {
+  return length * width;
+}
+
+function perimeter(length: number, width: number): number {
+  return 2.0 * (length + width);
+}
+
+function describeRectangle(length: number, width: number): void {
+  console.log("length: " + length.toFixed(1));
+  console.log("width: " + width.toFixed(1));
+  console.log("area: " + area(length, width).toFixed(2));
+  console.log("perimeter: " + perimeter(length, width).toFixed(2));
+  console.log();
+}
+
+describeRectangle(3.0, 4.0);
+describeRectangle(8.6, 5.1);
+describeRectangle(13.2, 2.5);
+</script>
+</div>
+</div>
+<div id="thursday-1" class="section level4">
+<h4>Thursday</h4>
 </div>
 </div>
 

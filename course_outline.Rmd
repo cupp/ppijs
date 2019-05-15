@@ -54,8 +54,8 @@ knitr::opts_chunk$set(echo = TRUE)
     + Is $a * (a * a + a) + a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{1234651234664646}$
     
 #### Thursday
-* Review of grammars / questions from homework (10 min.)
-* Brief introduction to VS Code (5 min.)
+* Review of grammars / questions from homework, J1 due (10 min.)
+* Brief introduction to VS Code, emphasis on console (5 min.)
 * JavaScript literals
 
     > A *literal* is an atomic value that can be used in a JavaScript expression
@@ -65,14 +65,116 @@ knitr::opts_chunk$set(echo = TRUE)
         2. value
     + Types
         + number (i.e. 4, -32, 3.14159)
+            - typeof operator (unary prefix)
+            - `typeof 8`
         + string (i.e. 'bird', 'c', 'Pepperdine University')
         + boolean (i.e. true, false)
-        + function (Math.sqrt, console.log)
+        + function (Math.sqrt, console.log, **Note: these are not literals. We'll learn about function literals later **)
 * JavaScript variables
     + Attributes of a variable (at any point in time a variable has a ...)
         1. name
         2. type
         3. value
+    + Variables in math (free to take any value) vs. variables in programming (bound to a single value)
     + Assignment
         - `let x = 4;`
         - Read as "let x get 4"
+        - `let` only used on first occurrence of variable
+        - Subsequent usage: `x = 3` ("x gets 3") changes value of `x`
+        - Lefthand side of assignment must be a single variable
+        - Righthand side can be any expression
+        - Type of variable is inferred from expression
+            - can change in standard JavaScript
+            - cannot change in TypeScript
+    + Constants
+        - `const TAX_RATE = 0.095;`
+        - Same as `let` but TAX_RATE cannot be changed
+        - All caps is standard convention for names of constants
+        - `var x = 4;` is for backwards compatibility, do not use
+* Arithmetic Operators (in order of precedence)
+    + unary plus `+`, unary negation `-`
+    + multiplication `*`, division `\`, modulus `%`
+    + addition `+`, subtraction `-`
+        - Note: no exponentiation operator, use `Math.pow(x, 2)`
+        - Note: no integer division operator, use `Math.floor(x / 2)`, see next lecture
+* First programs
+
+<hr/>
+###### hello.ts
+Write a program that prints the string `Hello, world!` to the console.
+```{js}
+console.log("Hello, world!\n");
+```
+
+<hr/>
+###### rectangle.ts  
+Write a program that computes and prints the area and perimeter of a rectangle
+with variable length and width to the console.
+```{js}
+  let length = 4.2;
+  let width = 5.8;
+  let area = length * width;
+  let perimeter = 2.0 * (length + width);
+  console.log("Area = " + area.toFixed(1));
+  console.log("Perimeter = " + perimeter.toFixed(1));
+```
+
+### Week Two
+#### Monday
+* Labor Day (no class)
+
+#### Tuesday
+* Integer arithmetic
+    + integer division `Math.floor(32 / 5)`
+    + modulus operator `32 % 5`
+* User-defined functions
+    + Function syntax
+    + Function literals
+* Array literals
+    + A collection of values into a single container
+    + `[4, 8, 2]`
+    + Can be assigned to a variable
+    + Can be used to return multiple values from a function
+    + We'll learn more about arrays later
+* Sample code
+
+<hr/>
+###### rectangleFunctions.ts  
+
+```{js}
+function area(length: number, width: number): number {
+  return length * width;
+}
+
+function perimeter(length: number, width: number): number {
+  return 2.0 * (length + width);
+}
+
+function describeRectangle(length: number, width: number): void {
+  console.log("length: " + length.toFixed(1));
+  console.log("width: " + width.toFixed(1));
+  console.log("area: " + area(length, width).toFixed(2));
+  console.log("perimeter: " + perimeter(length, width).toFixed(2));
+  console.log();
+}
+
+describeRectangle(3.0, 4.0);
+describeRectangle(8.6, 5.1);
+describeRectangle(13.2, 2.5);
+```
+
+###### change.ts
+
+```{js}
+function change(cents: number): number[] {
+  let quarters = Math.floor(cents / 25);
+  cents = cents % 25;
+  let dimes = Math.floor(cents / 10);
+  cents = cents % 10;
+  let nickels = Math.floor(cents / 5);
+  cents = cents % 5;
+  return [quarters, dimes, nickels, cents];
+}
+```
+
+#### Thursday
