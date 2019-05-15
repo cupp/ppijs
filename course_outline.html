@@ -373,6 +373,14 @@ console.log("Hello, world!\n");
 <li>Function syntax</li>
 <li>Function literals</li>
 </ul></li>
+<li>Array literals
+<ul>
+<li>A collection of values into a single container</li>
+<li><code>[4, 8, 2]</code></li>
+<li>Can be assigned to a variable</li>
+<li>Can be used to return multiple values from a function</li>
+<li>We’ll learn more about arrays later</li>
+</ul></li>
 <li>Sample code</li>
 </ul>
 <hr />
@@ -417,6 +425,29 @@ function describeRectangle(length: number, width: number): void {
 describeRectangle(3.0, 4.0);
 describeRectangle(8.6, 5.1);
 describeRectangle(13.2, 2.5);
+</script>
+</div>
+<div id="change.ts" class="section level6">
+<h6>change.ts</h6>
+<pre class="js"><code>function change(cents: number): number[] {
+  let quarters = Math.floor(cents / 25);
+  cents = cents % 25;
+  let dimes = Math.floor(cents / 10);
+  cents = cents % 10;
+  let nickels = Math.floor(cents / 5);
+  cents = cents % 5;
+  return [quarters, dimes, nickels, cents];
+}</code></pre>
+<script type="text/javascript">
+function change(cents: number): number[] {
+  let quarters = Math.floor(cents / 25);
+  cents = cents % 25;
+  let dimes = Math.floor(cents / 10);
+  cents = cents % 10;
+  let nickels = Math.floor(cents / 5);
+  cents = cents % 5;
+  return [quarters, dimes, nickels, cents];
+}
 </script>
 </div>
 </div>
