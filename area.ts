@@ -1,14 +1,19 @@
-// !ts-node
-
-const area = (length: number, width: number) => {
+function area(length: number, width: number): number {
     return length * width;
 }
 
-const perimeter = (length: number, width: number) => {
-    return 2 * (length + width);
+function perimeter(length: number, width: number): number {
+    return 2.0 * (length + width);
 }
 
-let a = area(3.5, 4.2);
-let b = perimeter(3.5, 4.2);
-console.log("a = " + a.toFixed(1));
-console.log("b = " + b.toFixed(1));
+function describeRectangle(length: number, width: number): void {
+    console.log("length: " + length.toFixed(1));
+    console.log("width: " + width.toFixed(1));
+    console.log("area: " + area(length, width).toFixed(2));
+    console.log("perimeter: " + perimeter(length, width).toFixed(2));
+    console.log();
+}
+
+describeRectangle(3.0, 4.0);
+describeRectangle(8.6, 5.1);
+describeRectangle(13.2, 2.5);

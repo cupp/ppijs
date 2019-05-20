@@ -124,23 +124,35 @@ with variable length and width to the console.
 * Labor Day (no class)
 
 #### Tuesday
-* Integer arithmetic
-    + integer division `Math.floor(32 / 5)`
-    + modulus operator `32 % 5`
 * User-defined functions
     + Function syntax
     + Function literals
-* Array literals
-    + A collection of values into a single container
-    + `[4, 8, 2]`
-    + Can be assigned to a variable
-    + Can be used to return multiple values from a function
-    + We'll learn more about arrays later
 * Sample code
 
 <hr/>
-###### rectangleFunctions.ts  
+###### triple.ts  
+```{js}
+function double(x: number): number {
+  return 2 * x;
+}
 
+const triple = function(x: number): number {
+  return 3 * x;
+}
+
+const magnify = function(x: number, factor: number = 2): number {
+  return x
+}
+
+console.log("double(6) -> " + double(6));
+console.log("triple(8) -> " + triple(8));
+console.log("magnify(9) -> " + magnify(9));
+console.log("magnify(6, 4) -> " + magnify(6, 4));
+console.log("double(7, 5) -> " + magnify(7, 5));
+```
+
+<hr/>
+###### rectangleFunctions.ts  
 ```{js}
 function area(length: number, width: number): number {
   return length * width;
@@ -163,6 +175,37 @@ describeRectangle(8.6, 5.1);
 describeRectangle(13.2, 2.5);
 ```
 
+#### Thursday
+* Integer arithmetic
+    + integer division `Math.floor(32 / 5)`
+    + modulus operator `32 % 5`
+* Array literals
+    + A collection of values into a single container
+    + `[4, 8, 2]`
+    + Can be assigned to a variable
+    + Can be used to return multiple values from a function
+    + Individual elements retrieved by index, i.e. `x[0]`, `x[1]`, etc.
+    + We'll learn more about arrays later
+
+<hr/>
+###### hyp.ts
+
+```{js}
+function hypotenuse(sideA: number, sideB: number): number {
+    let sum = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+    return Math.sqrt(sum);
+    
+    // return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+  }
+  
+  console.log();
+  console.log("hypotenuse(3, 4) => " + hypotenuse(3, 4).toFixed(1));
+  console.log("hypotenuse(12, 8) => " + hypotenuse(12, 8).toFixed(2));
+  console.log("hypotenuse(9, 16) => " + hypotenuse(9, 16).toFixed(2));
+  console.log();
+```
+
+<hr/>
 ###### change.ts
 
 ```{js}
@@ -175,6 +218,22 @@ function change(cents: number): number[] {
   cents = cents % 5;
   return [quarters, dimes, nickels, cents];
 }
+
+function reportChange(cents: number): void {
+    let coins = change(cents);
+    console.log();
+    console.log("Change for " + cents + " cents: ");
+    console.log("\tQuarters: " + coins[0]);
+    console.log("\tDimes: " + coins[1]);
+    console.log("\tNickels: " + coins[2]);
+    console.log("\tPennies: " + coins[3]);
+    console.log();
+}
+
+reportChange(89);
+reportChange(37);
+reportChange(5);
+reportChange(68);
+reportChange(99);
 ```
 
-#### Thursday
