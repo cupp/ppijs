@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ### Week One
-#### Monday
+#### Monday, 8/26
 * Syllabus highlights (20 min.)
 * Definitons of language and grammar (20 min.)
     + [Languages and Grammar (pdf)](https://www.cslab.pepperdine.edu/cupp/textbook/cfqtCh02.pdf)
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
     + Is $2b$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{\text{invalid}}$
     + Is $ab12c$ a valid identifier by grammar A? If so, show the syntax tree. $\color{red}{2332145786}$
 
-#### Tuesday
+#### Tuesday, 8/27
 * Grammar A review (5 min.)
 * Grammar B--Signed Integers (10 min.)
     + Definition of leftmost derivation
@@ -53,9 +53,10 @@ knitr::opts_chunk$set(echo = TRUE)
     + Is $(a * a)$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{24523466}$
     + Is $a * (a * a + a) + a$ a valid expression by Grammar D? If so, give the leftmost derivation. $\color{red}{1234651234664646}$
     
-#### Thursday
-* Review of grammars / questions from homework, J1 due (10 min.)
-* Brief introduction to VS Code, emphasis on console (5 min.)
+#### Thursday, 8/29
+* Questions from homework, J1 due tonight
+    + Quiz on syntax trees
+* Brief introduction to VS Code, emphasis on console
 * JavaScript literals
 
     > A *literal* is an atomic value that can be used in a JavaScript expression
@@ -120,10 +121,10 @@ with variable length and width to the console.
 ```
 
 ### Week Two
-#### Monday
+#### Monday, 9/2
 * Labor Day (no class)
 
-#### Tuesday
+#### Tuesday, 9/3
 * User-defined functions
     + Function syntax
     + Function literals
@@ -175,7 +176,10 @@ describeRectangle(8.6, 5.1);
 describeRectangle(13.2, 2.5);
 ```
 
-#### Thursday
+#### Thursday, 9/5
+* Questions from homework, J2 due tonight
+    + `meters(feet: number, inches: number): number`
+    + `celsius(fahrenheit: number): number`
 * Integer arithmetic
     + integer division `Math.floor(32 / 5)`
     + modulus operator `32 % 5`
@@ -237,3 +241,157 @@ reportChange(68);
 reportChange(99);
 ```
 
+### Week Three
+#### Monday, 9/9
+* Questions from the homework, J3 due tonight
+  + `operations(x: number, y: number): number[]`
+  + `weeksDaysHours(hours: number): number[]`
+
+#### Tuesday, 9/10
+
+#### Thursday, 9/12
+* Questions from the homework, J4 due tonight
+  + `commission(sales: number): number`
+  + `prize(score1: number, score2: number, score3: number): number`
+
+### Week Four
+#### Monday, 9/16
+* Questions from the homework, J5 due tonight
+  + `fine(speed: number): number`
+  + `deansList(numA: number, numB: number, numC: number, numD: number, numF: number): string`
+
+#### Tuesday, 9/17
+
+#### Thursday, 9/19
+* Questions from the homework, J6 due tonight
+  + Read [Nested Selections, Assertions and Invariants (pp. 36-43)](https://www.cslab.pepperdine.edu/cupp/textbook/cfqtCh08.pdf)
+  + strongest invariant problems
+  + `discOrder(quantity: number): number`
+
+### Week Five
+#### Monday, 9/23
+* Questions from the homework, J7 due tonight
+  + additional strongest invariant problems
+  + `inorder(a: number, b: number, c: number): number[]`
+
+#### Tuesday, 9/24
+
+#### Thursday, 9/26
+* Questions from the homework, J8 due tonight
+  + `stripTitle(name: string): string`
+  + `lastNameFirst(name: string): string`
+  + `pigLating(word: string): string`
+  
+### Week Six
+#### Monday, 9/30
+* EXAM ONE
+
+#### Tuesday, 10/1
+
+#### Thursday, 10/3
+* No assignment due
+
+### Week Seven
+#### Monday, 10/7
+* Questions from the homework, J9 due tonight
+  + FSM construction problems
+
+#### Tuesday, 10/8
+
+#### Thursday, 10/10
+* Questions from the homework, J10 due tonight
+  + Regular Expressino to FSM conversion problems
+  
+### Week Eight
+#### Monday, 10/14
+* Questions from the homework, J11 due tonight
+  + Written loop problems
+  + `ddb(cost: number, n: number, k: number): number`
+  + `euler(k: number): number`
+
+#### Tuesday, 10/15
+
+#### Thursday, 10/17
+* Questions from the homework, J12 due tonight
+  + `dec2bin(dec: number): string`
+  + `bin2dec(bin: string): number`
+  + `dec2hex(dec: number): string`
+  
+### Week Nine
+#### Monday, 10/21
+* Questions from the homework, J13 due tonight
+  + Written loop problems
+  + `ddb(cost: number, n: number, k: number): number`
+  + `euler(k: number): number`
+
+#### Tuesday, 10/22
+
+#### Thursday, 10/24
+* Questions from the homework, J14 due tonight
+  + `fib(n: number): number[]`
+  + `evenSum(v: number[]): number`
+  + `negCount(v: number[]): number`
+  
+### Week Ten
+#### Monday, 10/28
+* Questions from the homework, J15 due tonight
+  + Written loop problems
+  + `isLinear(v: number[]): boolean`
+  + `rotateLeft(v: number[]): number[]`
+  + `rotateRight(v: number[]): number[]`
+
+#### Tuesday, 10/29
+
+#### Thursday, 10/31
+* Questions from the homework, J16 due tonight
+  + `pig` game project
+
+### Week Eleven
+#### Monday, 11/4
+* EXAM TWO
+
+#### Tuesday, 11/5
+
+#### Thursday, 11/7
+* No assignment due
+
+### Week Twelve
+#### Monday, 11/11
+* Questions from the homework, J17 due tonight
+    + `rectangleWithBorder(rows: number, cols: number): string`
+    + `htmlRectangleWithBorder(rows: number, cols: number): void`
+    
+#### Tuesday, 11/12
+
+#### Thursday, 11/14
+* Questions from the homework, J18 due tonight
+    + `transpose(x: number[][]): number[][]`
+    + `numLarger(x: number[][], y: number[][]): number`
+
+### Week Thirteen
+#### Monday, 11/18
+    
+#### Tuesday, 11/19
+
+#### Thursday, 11/21
+
+### Week Fourteen
+#### Monday, 11/25
+* Questions from the homework, J19 due tonight
+    + Network client project
+    
+#### Tuesday, 11/26
+
+#### Thursday, 11/28
+* Thanksgiving Day, no class
+
+### Week Fifteen
+#### Monday, 12/2
+
+#### Tuesday, 12/3
+
+#### Thursday, 12/5
+* Questions from the homework, J20 due tonight
+    + Text mining project
+
+### FINAL EXAM, Week of 12/9, Dates TBA
