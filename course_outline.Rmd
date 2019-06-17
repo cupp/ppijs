@@ -8,7 +8,7 @@ output:
   pdf_document: default
 ---
 
-```{r setup, include=FALSE}
+```{js setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ### Week One
@@ -55,8 +55,9 @@ knitr::opts_chunk$set(echo = TRUE)
     
 #### Thursday, 8/29
 * Questions from homework, J1 due tonight
-    + Quiz on syntax trees
-* Brief introduction to VS Code, emphasis on console
+    + Courses Quiz on syntax trees
+    + Solutions on Courses
+* Brief introduction to CodePen, emphasis on JavaScript editor and console
 * JavaScript literals
 
     > A *literal* is an atomic value that can be used in a JavaScript expression
@@ -177,9 +178,10 @@ describeRectangle(13.2, 2.5);
 ```
 
 #### Thursday, 9/5
-* Questions from homework, J2 due tonight
-    + `meters(feet: number, inches: number): number`
-    + `celsius(fahrenheit: number): number`
+* Questions from homework, J2 due tonight.
+    + [CodePen Exercise&mdash;Feet to Meters](https://codepen.io/cupp/pen/XLJdXg?editors=0011#0)
+    + [CodePen Exercise&mdash;Fahrenheit to Celsius](https://codepen.io/cupp/pen/WqbOJM?editors=0011#0)
+
 * Integer arithmetic
     + integer division `Math.floor(32 / 5)`
     + modulus operator `32 % 5`
@@ -244,44 +246,46 @@ reportChange(99);
 ### Week Three
 #### Monday, 9/9
 * Questions from the homework, J3 due tonight
-  + `operations(x: number, y: number): number[]`
-  + `weeksDaysHours(hours: number): number[]`
+
+    + [CodePen Exercise&mdash;Aritmetic Operations](https://codepen.io/cupp/pen/wLBqQO?editors=0011#0)
+    + [CodePen Exercise&mdash;Weeks, Days, and Hours](https://codepen.io/cupp/pen/qzOmxP?editors=0011#0)
+
 
 #### Tuesday, 9/10
 
 #### Thursday, 9/12
 * Questions from the homework, J4 due tonight
-  + `commission(sales: number): number`
-  + `prize(score1: number, score2: number, score3: number): number`
+  
+    + [CodePen Exercise&mdash;Sales Commission](https://codepen.io/cupp/pen/MMaoem?editors=0011#0)
+    + [CodePen Exercise&mdash;Bowling Prize](https://codepen.io/cupp/pen/ydYzXy?editors=0011#0)
 
 ### Week Four
 #### Monday, 9/16
 * Questions from the homework, J5 due tonight
-  + `fine(speed: number): number`
-  + `deansList(numA: number, numB: number, numC: number, numD: number, numF: number): string`
+      + [CodePen Exercise&mdash;Speeding Ticket](https://codepen.io/cupp/pen/zVvPOE?editors=0011#0)
+      + [CodePen Exercise&mdash;Dean's List](https://codepen.io/cupp/pen/BgombQ?editors=0011#0)
 
 #### Tuesday, 9/17
 
 #### Thursday, 9/19
 * Questions from the homework, J6 due tonight
-  + Read [Nested Selections, Assertions and Invariants (pp. 36-43)](https://www.cslab.pepperdine.edu/cupp/textbook/cfqtCh08.pdf)
-  + strongest invariant problems
-  + `discOrder(quantity: number): number`
+    + Read [Nested Selections, Assertions and Invariants (pp. 36-43)](https://www.cslab.pepperdine.edu/cupp/textbook/cfqtCh08.pdf)
+    + strongest invariant problems (see problem 9 from chapter link above)
+    + [CodePen Exercise&mdash;Disc Order](https://codepen.io/cupp/pen/pXjpmB?editors=0011#0)
 
 ### Week Five
 #### Monday, 9/23
 * Questions from the homework, J7 due tonight
-  + additional strongest invariant problems
-  + `inorder(a: number, b: number, c: number): number[]`
+    + additional strongest invariant problems (see problem 10 from chapter link above)
+    + [CodePen Exercise&mdash;Sorting Three Numbers](https://codepen.io/cupp/pen/RzrKOb?editors=0011#0)
 
 #### Tuesday, 9/24
 
 #### Thursday, 9/26
 * Questions from the homework, J8 due tonight
-  + `stripTitle(name: string): string`
-  + `lastNameFirst(name: string): string`
-  + `pigLating(word: string): string`
-  
+  + [CodePen Execise&mdash;Strip Title](https://codepen.io/cupp/pen/PrZmVX?editors=0011#0)
+  + [CodePen Exercise&mdash;Last Name First](https://codepen.io/cupp/pen/jjWwjw?editors=0011#0)
+
 ### Week Six
 #### Monday, 9/30
 * EXAM ONE
@@ -294,57 +298,57 @@ reportChange(99);
 ### Week Seven
 #### Monday, 10/7
 * Questions from the homework, J9 due tonight
-  + FSM construction problems
+    + TBA, Previous problems with HTML/CSS/JQuery user interface
 
 #### Tuesday, 10/8
 
 #### Thursday, 10/10
 * Questions from the homework, J10 due tonight
-  + Regular Expressino to FSM conversion problems
+    + FSM construction problems
   
 ### Week Eight
 #### Monday, 10/14
 * Questions from the homework, J11 due tonight
-  + Written loop problems
-  + `ddb(cost: number, n: number, k: number): number`
-  + `euler(k: number): number`
+    + Regular Expression to FSM conversion problems
 
 #### Tuesday, 10/15
 
 #### Thursday, 10/17
 * Questions from the homework, J12 due tonight
-  + `dec2bin(dec: number): string`
-  + `bin2dec(bin: string): number`
-  + `dec2hex(dec: number): string`
+    + Written loop problems
+    + `ddb(cost: number, n: number, k: number): number`
+    + `euler(k: number): number`
   
 ### Week Nine
 #### Monday, 10/21
 * Questions from the homework, J13 due tonight
-  + Written loop problems
-  + `ddb(cost: number, n: number, k: number): number`
-  + `euler(k: number): number`
+    + `dec2bin(dec: number): string`
+    + `bin2dec(bin: string): number`
+    + `dec2hex(dec: number): string`
 
 #### Tuesday, 10/22
 
 #### Thursday, 10/24
 * Questions from the homework, J14 due tonight
-  + `fib(n: number): number[]`
-  + `evenSum(v: number[]): number`
-  + `negCount(v: number[]): number`
+    + Written loop problems
+    + `ddb(cost: number, n: number, k: number): number`
+    + `euler(k: number): number`
   
 ### Week Ten
 #### Monday, 10/28
 * Questions from the homework, J15 due tonight
-  + Written loop problems
-  + `isLinear(v: number[]): boolean`
-  + `rotateLeft(v: number[]): number[]`
-  + `rotateRight(v: number[]): number[]`
+    + `fib(n: number): number[]`
+    + `evenSum(v: number[]): number`
+    + `negCount(v: number[]): number`
 
 #### Tuesday, 10/29
 
 #### Thursday, 10/31
 * Questions from the homework, J16 due tonight
-  + `pig` game project
+    + Written loop problems
+    + `isLinear(v: number[]): boolean`
+    + `rotateLeft(v: number[]): number[]`
+    + `rotateRight(v: number[]): number[]`
 
 ### Week Eleven
 #### Monday, 11/4
@@ -358,22 +362,23 @@ reportChange(99);
 ### Week Twelve
 #### Monday, 11/11
 * Questions from the homework, J17 due tonight
-    + `rectangleWithBorder(rows: number, cols: number): string`
-    + `htmlRectangleWithBorder(rows: number, cols: number): void`
-    
+    + TBA    
 #### Tuesday, 11/12
 
 #### Thursday, 11/14
 * Questions from the homework, J18 due tonight
-    + `transpose(x: number[][]): number[][]`
-    + `numLarger(x: number[][], y: number[][]): number`
+    + `pig` game project
 
 ### Week Thirteen
 #### Monday, 11/18
+    + `rectangleWithBorder(rows: number, cols: number): string`
+    + `htmlRectangleWithBorder(rows: number, cols: number): void`
     
 #### Tuesday, 11/19
 
 #### Thursday, 11/21
+    + `transpose(x: number[][]): number[][]`
+    + `numLarger(x: number[][], y: number[][]): number`
 
 ### Week Fourteen
 #### Monday, 11/25
