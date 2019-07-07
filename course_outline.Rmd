@@ -255,15 +255,14 @@ reportChange(99);
 
 #### Thursday, 9/12
 * Questions from the homework, J4 due tonight
-  
     + [CodePen Exercise&mdash;Sales Commission](https://codepen.io/cupp/pen/MMaoem?editors=0011#0)
     + [CodePen Exercise&mdash;Bowling Prize](https://codepen.io/cupp/pen/ydYzXy?editors=0011#0)
 
 ### Week Four
 #### Monday, 9/16
 * Questions from the homework, J5 due tonight
-      + [CodePen Exercise&mdash;Speeding Ticket](https://codepen.io/cupp/pen/zVvPOE?editors=0011#0)
-      + [CodePen Exercise&mdash;Dean's List](https://codepen.io/cupp/pen/BgombQ?editors=0011#0)
+    + [CodePen Exercise&mdash;Speeding Ticket](https://codepen.io/cupp/pen/zVvPOE?editors=0011#0)
+    + [CodePen Exercise&mdash;Dean's List](https://codepen.io/cupp/pen/BgombQ?editors=0011#0)
 
 #### Tuesday, 9/17
 
@@ -291,25 +290,161 @@ reportChange(99);
 * EXAM ONE
 
 #### Tuesday, 10/1
+* The "Holy Trinity": HTML vs. CSS vs. JavaScript
+    + HTML for document structure, content (i.e. model)
+    + CSS for document appearance, style (i.e. view)
+    + JavaScript for document logic, interaction (i.e. controller)
+* HTML&mdash;**H**yper**T**ext **M**arkup **L**anguage
+    + **IMPORTANT:** Make clear to students that they need to understand HTML
+        and CSS, but they will never be asked to produce either on an exam.
+        They will, however, be asked to read, interpret, and interact with
+        HTML and CSS via JavaScript/JQuery (covered in next lecture). Thus,
+        our goal here is not comprehensive coverage but illustration.
+    + Basic idea&mdash;Content via plain text. Markup adds sturcture.
+    + Markup accomplished via *tags*.
+        + Binary tags surround content
+            + `<p>`&hellip;`</p>`
+            + `<quote>`&hellip;`</quote>`
+            + `<code>`&hellip;`</code>`
+            + `<h1>`&hellip;`</h1>` through `<h6>`&hellip;`</h6>`
+            + `<div>`&hellip;`</div>`
+            + etc.
+        + Unary tags have no content
+            + `<br/>`
+            + `<hr/>`
+            + etc.
+        + Standard HTML 5 document structure
+            + See `sample.html` below
+            + *Note*: `<html>`, `<head>`, `<title>`, `<body>` tags and links to CSS
+              and JavaScript are hidden by CodePen
+            + Contents of CodePen HTML pane are inserted into `<body>` element.
+            + Title and links are specified in CodePen settings.
+        + Emmet tag expansion system (i.e. `ol>li*5 TAB`, optional)
+        + Explore examples
+    + Tag attributes
+        + Provide extra information for a particular tag
+        + Similar to parameters of a function
+        + Examples
+            + Content specification
+                + `<a href="http://www.pepperdine.edu">My school</a>`
+                + `<img src="flower.jpg"/>`
+            + Style specification
+                + `<p style="color:red">Hello, world!</p>`
+                + `<h1 style="font-size:72px">COSC 101</h1>`
+            + Metainformation
+                + `<button id="myButton">Click Here</button>`
+                + `<p class="important">Really important text!</p>`
+        + Content attributes and metainformation attributes are necessary.
+            Style attributes are typically handled by CSS.
+* CSS&mdash;**C**ascading **S**tyle **S**heets
+    + Basic idea&mdash;Provide explicit formatting information to override default rendering of HTML tags.
+    + Select a group of elements then specify style for that group
+    + Selectors
+        + Element selectors: select all elements of a type (named by tag)
+            + `p`
+            + `h1`
+            + `button`
+        + ID selectors: select a single element with a particular value in its `id` attribute
+            + `#myButton`
+            + `#main`
+            + `#x`
+        + Class selectors: select (potentially) multiple elements all with a particular value 
+            in their `class` attributes
+            + `.important`
+            + `.unclickable`
+            + `.y`
+    + Demo
+        + Develop a simple HTML document
+        + Incrementally build CSS file to change appearance of HTML
+        + See `cssDemo.html` and `cssDemo.css` below.
+* JavaScript/JQuery
+    + Basic idea&mdash;Use JavaScript functions to alter content and behavior of HTML and CSS code.
+    + JQuery is a library of JavaScript functions to make this easier (possible using straight JavaScript).
+    + Details next lecture.
+
+<hr/>
+##### sample.html
+
+```{HTML}
+<html>
+  <head>
+    <title>The Title of the Document</title>
+  </head>
+  <body>
+    Contents of the document go here.
+  </body>
+</html>
+```
+    
+##### cssDemo.html
+```{HTML}
+coming soon
+```
+
+##### cssDemo.css
+```{CSS}
+coming soon
+```
 
 #### Thursday, 10/3
 * No assignment due
+* jQuery
+    + Basic idea&mdash;System to select elements of HTML document to be further
+    manipulated via JavaScript.
+    + Must add link to external jQuery library (demo in CodePen)
+    + Similar to idea of CSS selectors and uses same symbols
+        + `$("p")` selects all paragraph elements
+        + `$("#main")` selects the one element that has id attribute = "main"
+        + `$(".big")` selects all elements that have class attribute = "big"
+    + Also provides functions to capture and respond to user interface events
+        + Most take a function object as its parameter. Function is called when
+        event occurs.
+        + `$("#x").click(myFun)` runs `myFun` when HTML element with id = x
+        is clicked.
+        + `$("#y").change(otherFun)` runs `otherFun` when the value of HTML 
+        element with id = y changes.
+        + `$("button").click(thirdFun)` runs `thirdFun` when *any* button is
+        clicked.
+    + Also provides functions to alter existing HTML and CSS code
+        + `$("#myButton").html("Click me now!")` replaces existing HTML text
+        within tags of element with id `myButton` with `Click me now!`. Works
+        on any binary tag, replacing HTML between opening and closing tags.
+        + `$("#hoursWorked").val(40)` changes value of element with id
+        `hoursWorked` to 40. Works with unary tags like `<input/>`, where
+        the user typically provides the value.
+        + `$("h1").css("color", "red")` changes color of all h1 tags to red.
+        + Same functions without final parameter retrieve current value in
+        the element
+            + `let text = $("#myButton").html()`
+            + `let hours = $("#hoursWorked").val()`
+            + `let currentColor = $("h1").css("color")`
+    + Sample code below
+    
+##### Examples
 
+```{js}
+Coming soon
+```
+
+        
 ### Week Seven
 #### Monday, 10/7
 * Questions from the homework, J9 due tonight
-    + TBA, Previous problems with HTML/CSS/JQuery user interface
+    + [CodePen Exercise&mdash;Sorting Three Numbers with GUI](https://codepen.io/cupp/pen/jjvgZZ)
+* GUI example&mdash;Coverting decimal to binary (five bits)
 
 #### Tuesday, 10/8
+* Introduction to HAML and Bootcamp
 
 #### Thursday, 10/10
 * Questions from the homework, J10 due tonight
-    + FSM construction problems
+    + [CodePen Exercise&mdash;Converting binary to decimal](https://codepen.io/cupp/pen/EgyYVX)
+* In-classProject using HAML and Bootcamp
   
 ### Week Eight
 #### Monday, 10/14
 * Questions from the homework, J11 due tonight
-    + Regular Expression to FSM conversion problems
+    + CodePen Exercise involving HAML and Bootcamp&mdash;TBA
 
 #### Tuesday, 10/15
 
@@ -363,6 +498,7 @@ reportChange(99);
 #### Monday, 11/11
 * Questions from the homework, J17 due tonight
     + TBA    
+    
 #### Tuesday, 11/12
 
 #### Thursday, 11/14
@@ -371,19 +507,21 @@ reportChange(99);
 
 ### Week Thirteen
 #### Monday, 11/18
+* Questions from the homework, J19 due tonight
     + `rectangleWithBorder(rows: number, cols: number): string`
     + `htmlRectangleWithBorder(rows: number, cols: number): void`
     
 #### Tuesday, 11/19
 
 #### Thursday, 11/21
+* Questions from the homework, J20 due tonight
     + `transpose(x: number[][]): number[][]`
     + `numLarger(x: number[][], y: number[][]): number`
 
 ### Week Fourteen
 #### Monday, 11/25
-* Questions from the homework, J19 due tonight
-    + Network client project
+* Questions from the homework, J21 due tonight
+    + Network client project (subject to change)
     
 #### Tuesday, 11/26
 
@@ -396,7 +534,7 @@ reportChange(99);
 #### Tuesday, 12/3
 
 #### Thursday, 12/5
-* Questions from the homework, J20 due tonight
-    + Text mining project
+* Questions from the homework, J22 due tonight
+    + Text mining project (subject to change)
 
 ### FINAL EXAM, Week of 12/9, Dates TBA

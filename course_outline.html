@@ -590,7 +590,7 @@ reportChange(99);
 <div id="thursday-912" class="section level4">
 <h4>Thursday, 9/12</h4>
 <ul>
-<li><p>Questions from the homework, J4 due tonight</p>
+<li>Questions from the homework, J4 due tonight
 <ul>
 <li><a href="https://codepen.io/cupp/pen/MMaoem?editors=0011#0">CodePen Exercise—Sales Commission</a></li>
 <li><a href="https://codepen.io/cupp/pen/ydYzXy?editors=0011#0">CodePen Exercise—Bowling Prize</a></li>
@@ -659,12 +659,172 @@ reportChange(99);
 </div>
 <div id="tuesday-101" class="section level4">
 <h4>Tuesday, 10/1</h4>
+<ul>
+<li>The “Holy Trinity”: HTML vs. CSS vs. JavaScript
+<ul>
+<li>HTML for document structure, content (i.e. model)</li>
+<li>CSS for document appearance, style (i.e. view)</li>
+<li>JavaScript for document logic, interaction (i.e. controller)</li>
+</ul></li>
+<li>HTML—<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage
+<ul>
+<li><strong>IMPORTANT:</strong> Make clear to students that they need to understand HTML and CSS, but they will never be asked to produce either on an exam. They will, however, be asked to read, interpret, and interact with HTML and CSS via JavaScript/JQuery (covered in next lecture). Thus, our goal here is not comprehensive coverage but illustration.</li>
+<li>Basic idea—Content via plain text. Markup adds sturcture.</li>
+<li>Markup accomplished via <em>tags</em>.
+<ul>
+<li>Binary tags surround content
+<ul>
+<li><code>&lt;p&gt;</code>…<code>&lt;/p&gt;</code></li>
+<li><code>&lt;quote&gt;</code>…<code>&lt;/quote&gt;</code></li>
+<li><code>&lt;code&gt;</code>…<code>&lt;/code&gt;</code></li>
+<li><code>&lt;h1&gt;</code>…<code>&lt;/h1&gt;</code> through <code>&lt;h6&gt;</code>…<code>&lt;/h6&gt;</code></li>
+<li><code>&lt;div&gt;</code>…<code>&lt;/div&gt;</code></li>
+<li>etc.</li>
+</ul></li>
+<li>Unary tags have no content
+<ul>
+<li><code>&lt;br/&gt;</code></li>
+<li><code>&lt;hr/&gt;</code></li>
+<li>etc.</li>
+</ul></li>
+<li>Standard HTML 5 document structure
+<ul>
+<li>See <code>sample.html</code> below</li>
+<li><em>Note</em>: <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags and links to CSS and JavaScript are hidden by CodePen</li>
+<li>Contents of CodePen HTML pane are inserted into <code>&lt;body&gt;</code> element.</li>
+<li>Title and links are specified in CodePen settings.</li>
+</ul></li>
+<li>Emmet tag expansion system (i.e. <code>ol&gt;li*5 TAB</code>, optional)</li>
+<li>Explore examples</li>
+</ul></li>
+<li>Tag attributes
+<ul>
+<li>Provide extra information for a particular tag</li>
+<li>Similar to parameters of a function</li>
+<li>Examples
+<ul>
+<li>Content specification
+<ul>
+<li><code>&lt;a href=&quot;http://www.pepperdine.edu&quot;&gt;My school&lt;/a&gt;</code></li>
+<li><code>&lt;img src=&quot;flower.jpg&quot;/&gt;</code></li>
+</ul></li>
+<li>Style specification
+<ul>
+<li><code>&lt;p style=&quot;color:red&quot;&gt;Hello, world!&lt;/p&gt;</code></li>
+<li><code>&lt;h1 style=&quot;font-size:72px&quot;&gt;COSC 101&lt;/h1&gt;</code></li>
+</ul></li>
+<li>Metainformation
+<ul>
+<li><code>&lt;button id=&quot;myButton&quot;&gt;Click Here&lt;/button&gt;</code></li>
+<li><code>&lt;p class=&quot;important&quot;&gt;Really important text!&lt;/p&gt;</code></li>
+</ul></li>
+</ul></li>
+<li>Content attributes and metainformation attributes are necessary. Style attributes are typically handled by CSS.</li>
+</ul></li>
+</ul></li>
+<li>CSS—<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets
+<ul>
+<li>Basic idea—Provide explicit formatting information to override default rendering of HTML tags.</li>
+<li>Select a group of elements then specify style for that group</li>
+<li>Selectors
+<ul>
+<li>Element selectors: select all elements of a type (named by tag)
+<ul>
+<li><code>p</code></li>
+<li><code>h1</code></li>
+<li><code>button</code></li>
+</ul></li>
+<li>ID selectors: select a single element with a particular value in its <code>id</code> attribute
+<ul>
+<li><code>#myButton</code></li>
+<li><code>#main</code></li>
+<li><code>#x</code></li>
+</ul></li>
+<li>Class selectors: select (potentially) multiple elements all with a particular value in their <code>class</code> attributes
+<ul>
+<li><code>.important</code></li>
+<li><code>.unclickable</code></li>
+<li><code>.y</code></li>
+</ul></li>
+</ul></li>
+<li>Demo
+<ul>
+<li>Develop a simple HTML document</li>
+<li>Incrementally build CSS file to change appearance of HTML</li>
+<li>See <code>cssDemo.html</code> and <code>cssDemo.css</code> below.</li>
+</ul></li>
+</ul></li>
+<li>JavaScript/JQuery
+<ul>
+<li>Basic idea—Use JavaScript functions to alter content and behavior of HTML and CSS code.</li>
+<li>JQuery is a library of JavaScript functions to make this easier (possible using straight JavaScript).</li>
+<li>Details next lecture.</li>
+</ul></li>
+</ul>
+<hr />
+<div id="sample.html" class="section level5">
+<h5>sample.html</h5>
+<pre class="html"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;The Title of the Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Contents of the document go here.
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+<div id="cssdemo.html" class="section level5">
+<h5>cssDemo.html</h5>
+<pre class="html"><code>coming soon</code></pre>
+</div>
+<div id="cssdemo.css" class="section level5">
+<h5>cssDemo.css</h5>
+<pre class="css"><code>coming soon</code></pre>
+</div>
 </div>
 <div id="thursday-103" class="section level4">
 <h4>Thursday, 10/3</h4>
 <ul>
 <li>No assignment due</li>
+<li>jQuery
+<ul>
+<li>Basic idea—System to select elements of HTML document to be further manipulated via JavaScript.</li>
+<li>Must add link to external jQuery library (demo in CodePen)</li>
+<li>Similar to idea of CSS selectors and uses same symbols
+<ul>
+<li><code>$(&quot;p&quot;)</code> selects all paragraph elements</li>
+<li><code>$(&quot;#main&quot;)</code> selects the one element that has id attribute = “main”</li>
+<li><code>$(&quot;.big&quot;)</code> selects all elements that have class attribute = “big”</li>
+</ul></li>
+<li>Also provides functions to capture and respond to user interface events
+<ul>
+<li>Most take a function object as its parameter. Function is called when event occurs.</li>
+<li><code>$(&quot;#x&quot;).click(myFun)</code> runs <code>myFun</code> when HTML element with id = x is clicked.</li>
+<li><code>$(&quot;#y&quot;).change(otherFun)</code> runs <code>otherFun</code> when the value of HTML element with id = y changes.</li>
+<li><code>$(&quot;button&quot;).click(thirdFun)</code> runs <code>thirdFun</code> when <em>any</em> button is clicked.</li>
+</ul></li>
+<li>Also provides functions to alter existing HTML and CSS code
+<ul>
+<li><code>$(&quot;#myButton&quot;).html(&quot;Click me now!&quot;)</code> replaces existing HTML text within tags of element with id <code>myButton</code> with <code>Click me now!</code>. Works on any binary tag, replacing HTML between opening and closing tags.</li>
+<li><code>$(&quot;#hoursWorked&quot;).val(40)</code> changes value of element with id <code>hoursWorked</code> to 40. Works with unary tags like <code>&lt;input/&gt;</code>, where the user typically provides the value.</li>
+<li><code>$(&quot;h1&quot;).css(&quot;color&quot;, &quot;red&quot;)</code> changes color of all h1 tags to red.</li>
+<li>Same functions without final parameter retrieve current value in the element
+<ul>
+<li><code>let text = $(&quot;#myButton&quot;).html()</code></li>
+<li><code>let hours = $(&quot;#hoursWorked&quot;).val()</code></li>
+<li><code>let currentColor = $(&quot;h1&quot;).css(&quot;color&quot;)</code></li>
+</ul></li>
+</ul></li>
+<li>Sample code below</li>
+</ul></li>
 </ul>
+<div id="examples" class="section level5">
+<h5>Examples</h5>
+<pre class="js"><code>Coming soon</code></pre>
+<script type="text/javascript">
+Coming soon
+</script>
+</div>
 </div>
 </div>
 <div id="week-seven" class="section level3">
@@ -674,20 +834,25 @@ reportChange(99);
 <ul>
 <li>Questions from the homework, J9 due tonight
 <ul>
-<li>TBA, Previous problems with HTML/CSS/JQuery user interface</li>
+<li><a href="https://codepen.io/cupp/pen/jjvgZZ">CodePen Exercise—Sorting Three Numbers with GUI</a></li>
 </ul></li>
+<li>GUI example—Coverting decimal to binary (five bits)</li>
 </ul>
 </div>
 <div id="tuesday-108" class="section level4">
 <h4>Tuesday, 10/8</h4>
+<ul>
+<li>Introduction to HAML and Bootcamp</li>
+</ul>
 </div>
 <div id="thursday-1010" class="section level4">
 <h4>Thursday, 10/10</h4>
 <ul>
 <li>Questions from the homework, J10 due tonight
 <ul>
-<li>FSM construction problems</li>
+<li><a href="https://codepen.io/cupp/pen/EgyYVX">CodePen Exercise—Converting binary to decimal</a></li>
 </ul></li>
+<li>In-classProject using HAML and Bootcamp</li>
 </ul>
 </div>
 </div>
@@ -698,7 +863,7 @@ reportChange(99);
 <ul>
 <li>Questions from the homework, J11 due tonight
 <ul>
-<li>Regular Expression to FSM conversion problems</li>
+<li>CodePen Exercise involving HAML and Bootcamp—TBA</li>
 </ul></li>
 </ul>
 </div>
@@ -799,10 +964,12 @@ reportChange(99);
 <ul>
 <li>Questions from the homework, J17 due tonight
 <ul>
-<li>TBA<br />
-#### Tuesday, 11/12</li>
+<li>TBA</li>
 </ul></li>
 </ul>
+</div>
+<div id="tuesday-1112" class="section level4">
+<h4>Tuesday, 11/12</h4>
 </div>
 <div id="thursday-1114" class="section level4">
 <h4>Thursday, 11/14</h4>
@@ -818,16 +985,26 @@ reportChange(99);
 <h3>Week Thirteen</h3>
 <div id="monday-1118" class="section level4">
 <h4>Monday, 11/18</h4>
-<pre><code>+ `rectangleWithBorder(rows: number, cols: number): string`
-+ `htmlRectangleWithBorder(rows: number, cols: number): void`</code></pre>
+<ul>
+<li>Questions from the homework, J19 due tonight
+<ul>
+<li><code>rectangleWithBorder(rows: number, cols: number): string</code></li>
+<li><code>htmlRectangleWithBorder(rows: number, cols: number): void</code></li>
+</ul></li>
+</ul>
 </div>
 <div id="tuesday-1119" class="section level4">
 <h4>Tuesday, 11/19</h4>
 </div>
 <div id="thursday-1121" class="section level4">
 <h4>Thursday, 11/21</h4>
-<pre><code>+ `transpose(x: number[][]): number[][]`
-+ `numLarger(x: number[][], y: number[][]): number`</code></pre>
+<ul>
+<li>Questions from the homework, J20 due tonight
+<ul>
+<li><code>transpose(x: number[][]): number[][]</code></li>
+<li><code>numLarger(x: number[][], y: number[][]): number</code></li>
+</ul></li>
+</ul>
 </div>
 </div>
 <div id="week-fourteen" class="section level3">
@@ -835,9 +1012,9 @@ reportChange(99);
 <div id="monday-1125" class="section level4">
 <h4>Monday, 11/25</h4>
 <ul>
-<li>Questions from the homework, J19 due tonight
+<li>Questions from the homework, J21 due tonight
 <ul>
-<li>Network client project</li>
+<li>Network client project (subject to change)</li>
 </ul></li>
 </ul>
 </div>
@@ -862,9 +1039,9 @@ reportChange(99);
 <div id="thursday-125" class="section level4">
 <h4>Thursday, 12/5</h4>
 <ul>
-<li>Questions from the homework, J20 due tonight
+<li>Questions from the homework, J22 due tonight
 <ul>
-<li>Text mining project</li>
+<li>Text mining project (subject to change)</li>
 </ul></li>
 </ul>
 </div>
