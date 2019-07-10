@@ -378,12 +378,44 @@ reportChange(99);
     
 ##### cssDemo.html
 ```{HTML}
-coming soon
+<div id="a">A</div>
+<div id="b" class="special">B</div>
+<div id="c" class="special">C</div>
+<div id="d">D</div>
 ```
 
 ##### cssDemo.css
 ```{CSS}
-coming soon
+div {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+#a {
+  background-color: red;
+  top: 300px;
+  left: 150px;
+}
+
+#b {
+  top: 50px;
+  left: 600px;
+}
+
+#c {
+  background-color: black;
+  color: white;
+  top: 450px;
+  left: 20px;
+}
+
+.special {
+  font-size: 4em;
+  text-align: center;
+  line-height: 200px;
+}
 ```
 
 #### Thursday, 10/3
