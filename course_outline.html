@@ -762,8 +762,8 @@ reportChange(99);
 </ul></li>
 </ul>
 <hr />
-<div id="sample.html" class="section level5">
-<h5>sample.html</h5>
+<div id="sample.html" class="section level6">
+<h6>sample.html</h6>
 <pre class="html"><code>&lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;The Title of the Document&lt;/title&gt;
@@ -773,15 +773,15 @@ reportChange(99);
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </div>
-<div id="cssdemo.html" class="section level5">
-<h5>cssDemo.html</h5>
+<div id="cssdemo.html" class="section level6">
+<h6>cssDemo.html</h6>
 <pre class="html"><code>&lt;div id=&quot;a&quot;&gt;A&lt;/div&gt;
 &lt;div id=&quot;b&quot; class=&quot;special&quot;&gt;B&lt;/div&gt;
 &lt;div id=&quot;c&quot; class=&quot;special&quot;&gt;C&lt;/div&gt;
 &lt;div id=&quot;d&quot;&gt;D&lt;/div&gt;</code></pre>
 </div>
-<div id="cssdemo.css" class="section level5">
-<h5>cssDemo.css</h5>
+<div id="cssdemo.css" class="section level6">
+<h6>cssDemo.css</h6>
 <pre class="css"><code>div {
   background-color: yellow;
   width: 200px;
@@ -850,8 +850,8 @@ reportChange(99);
 <li>Sample code below</li>
 </ul></li>
 </ul>
-<div id="examples" class="section level5">
-<h5>Examples</h5>
+<div id="examples" class="section level6">
+<h6>Examples</h6>
 <pre class="js"><code>Coming soon</code></pre>
 <script type="text/javascript">
 Coming soon
@@ -876,6 +876,121 @@ Coming soon
 <ul>
 <li>Introduction to HAML and Bootcamp</li>
 </ul>
+<div id="rectangle.html" class="section level6">
+<h6>rectangle.html</h6>
+<pre class="html"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;h1&gt;Rectangle App&lt;/h1&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;width&quot;&gt;Width&lt;/label&gt;
+    &lt;input id=&quot;widthInput&quot; type=&quot;number&quot; class=&quot;form-control&quot; min=&quot;1&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;height&quot;&gt;Height&lt;/label&gt;
+    &lt;input id=&quot;heightInput&quot; type=&quot;number&quot; class=&quot;form-control&quot; min=&quot;1&quot;&gt;
+  &lt;/div&gt;
+  &lt;button id=&quot;calcButton&quot; class=&quot;btn btn-success&quot;&gt;Calculate&lt;/button&gt;
+  &lt;br&gt;
+  &lt;p id=&quot;out&quot;&gt;&lt;/p&gt;
+  &lt;div id=&quot;rect&quot; class=&quot;bg-primary text-white&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="rectangle.haml" class="section level6">
+<h6>rectangle.haml</h6>
+<pre class="haml"><code>.container
+  %h1 Rectangle App
+  .form-group
+    %label Width
+    %input.form-control#widthInput{:type =&gt; &quot;number&quot;, :min =&gt; &quot;1&quot;}
+  .form-group
+    %label Height
+    %input.form-control#heightInput{:type =&gt; &quot;number&quot;, :min =&gt; &quot;1&quot;}
+  %button.btn.btn-success#calcButton Calculate
+  %br
+  %p#out
+  #rect.bg-primary.text-white</code></pre>
+</div>
+<div id="rectangle.css" class="section level6">
+<h6>rectangle.css</h6>
+<pre class="css"><code>#out {
+  margin-top: 48px;
+}
+
+#rect {
+  width: 0px;
+  height: 0px;
+  border: solid black 1px;
+  visibility: hidden;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}</code></pre>
+<style type="text/css">
+#out {
+  margin-top: 48px;
+}
+
+#rect {
+  width: 0px;
+  height: 0px;
+  border: solid black 1px;
+  visibility: hidden;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+</div>
+<div id="rectangle.js" class="section level6">
+<h6>rectangle.js</h6>
+<pre class="js"><code>const MIN_DISPLAY = 200;
+$(&quot;#calcButton&quot;).click(() =&gt; {
+  let width = Number($(&quot;#widthInput&quot;).val());
+  let height = Number($(&quot;#heightInput&quot;).val());
+  let area = width * height;
+  let perimeter = 2.0 * (width + height);
+  let output = &quot;&lt;p&gt;Width: &quot; + width;
+  output += &quot;&lt;br/&gt;Height: &quot; + height;
+  output += &quot;&lt;br/&gt;Area: &quot; + area;
+  output += &quot;&lt;br/&gt;Perimeter: &quot; + perimeter;
+  output += &quot;&lt;/p&gt;&quot;;
+  $(&quot;#rect&quot;).css(&quot;width&quot;, width);
+  $(&quot;#rect&quot;).css(&quot;height&quot;, height);
+  $(&quot;#rect&quot;).css(&quot;visibility&quot;, &quot;visible&quot;);
+  if (width &lt; MIN_DISPLAY || height &lt; MIN_DISPLAY) {
+    $(&quot;#out&quot;).html(output);
+    $(&quot;#rect&quot;).html(&quot;&quot;);
+  } else {
+    $(&quot;#out&quot;).html(&quot;&quot;);
+    $(&quot;#rect&quot;).html(output);    
+  }
+});</code></pre>
+<script type="text/javascript">
+const MIN_DISPLAY = 200;
+$("#calcButton").click(() => {
+  let width = Number($("#widthInput").val());
+  let height = Number($("#heightInput").val());
+  let area = width * height;
+  let perimeter = 2.0 * (width + height);
+  let output = "<p>Width: " + width;
+  output += "<br/>Height: " + height;
+  output += "<br/>Area: " + area;
+  output += "<br/>Perimeter: " + perimeter;
+  output += "</p>";
+  $("#rect").css("width", width);
+  $("#rect").css("height", height);
+  $("#rect").css("visibility", "visible");
+  if (width < MIN_DISPLAY || height < MIN_DISPLAY) {
+    $("#out").html(output);
+    $("#rect").html("");
+  } else {
+    $("#out").html("");
+    $("#rect").html(output);    
+  }
+});
+</script>
+</div>
 </div>
 <div id="thursday-1010" class="section level4">
 <h4>Thursday, 10/10</h4>

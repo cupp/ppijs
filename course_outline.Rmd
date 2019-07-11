@@ -363,7 +363,7 @@ reportChange(99);
     + Details next lecture.
 
 <hr/>
-##### sample.html
+###### sample.html
 
 ```{HTML}
 <html>
@@ -376,7 +376,7 @@ reportChange(99);
 </html>
 ```
     
-##### cssDemo.html
+###### cssDemo.html
 ```{HTML}
 <div id="a">A</div>
 <div id="b" class="special">B</div>
@@ -384,7 +384,7 @@ reportChange(99);
 <div id="d">D</div>
 ```
 
-##### cssDemo.css
+###### cssDemo.css
 ```{CSS}
 div {
   background-color: yellow;
@@ -452,7 +452,7 @@ div {
             + `let currentColor = $("h1").css("color")`
     + Sample code below
     
-##### Examples
+###### Examples
 
 ```{js}
 Coming soon
@@ -467,6 +467,85 @@ Coming soon
 
 #### Tuesday, 10/8
 * Introduction to HAML and Bootcamp
+
+###### rectangle.html
+```{html}
+<div class="container">
+  <h1>Rectangle App</h1>
+  <div class="form-group">
+    <label for="width">Width</label>
+    <input id="widthInput" type="number" class="form-control" min="1">
+  </div>
+  <div class="form-group">
+    <label for="height">Height</label>
+    <input id="heightInput" type="number" class="form-control" min="1">
+  </div>
+  <button id="calcButton" class="btn btn-success">Calculate</button>
+  <br>
+  <p id="out"></p>
+  <div id="rect" class="bg-primary text-white"></div>
+</div>
+```
+
+###### rectangle.haml
+```{haml}
+.container
+  %h1 Rectangle App
+  .form-group
+    %label Width
+    %input.form-control#widthInput{:type => "number", :min => "1"}
+  .form-group
+    %label Height
+    %input.form-control#heightInput{:type => "number", :min => "1"}
+  %button.btn.btn-success#calcButton Calculate
+  %br
+  %p#out
+  #rect.bg-primary.text-white
+```
+
+###### rectangle.css
+```{css}
+#out {
+  margin-top: 48px;
+}
+
+#rect {
+  width: 0px;
+  height: 0px;
+  border: solid black 1px;
+  visibility: hidden;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+###### rectangle.js
+```{js}
+const MIN_DISPLAY = 200;
+$("#calcButton").click(() => {
+  let width = Number($("#widthInput").val());
+  let height = Number($("#heightInput").val());
+  let area = width * height;
+  let perimeter = 2.0 * (width + height);
+  let output = "<p>Width: " + width;
+  output += "<br/>Height: " + height;
+  output += "<br/>Area: " + area;
+  output += "<br/>Perimeter: " + perimeter;
+  output += "</p>";
+  $("#rect").css("width", width);
+  $("#rect").css("height", height);
+  $("#rect").css("visibility", "visible");
+  if (width < MIN_DISPLAY || height < MIN_DISPLAY) {
+    $("#out").html(output);
+    $("#rect").html("");
+  } else {
+    $("#out").html("");
+    $("#rect").html(output);    
+  }
+});
+```
 
 #### Thursday, 10/10
 * Questions from the homework, J10 due tonight
