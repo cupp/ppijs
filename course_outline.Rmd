@@ -466,7 +466,66 @@ Coming soon
 * GUI example&mdash;Coverting decimal to binary (five bits)
 
 #### Tuesday, 10/8
-* Introduction to HAML and Bootcamp
+* HTML Preprocessors
+    + Markdown
+        + Reduces bulkiness of HTML tag notation (see example below).
+        + Simpler Markdown is converted into HTML before web page is loaded.
+        + Popular for text content authors (i.e. blogs)
+        + Not used in this course.
+    + HAML&mdash;**H**TML **A**bstraction **M**arkup **L**anguage
+        + Same idea as Markdown, but specialized for coding
+        + Shortcuts optimized for divs, classes, and ids.
+        + `div` is the default tag
+        + `%` used to identify other tags
+        + Matches CSS notation for id (`#`) and class (`.`) attributes.
+        + Other attributes identified via object notation.
+        + See rectangle app below.
+        
+###### notes.html
+```{html}
+<h1>Lists</h1>
+<h2>Unordered</h2>
+<ul>
+  <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+  <li>Sub-lists are made by indenting 2 spaces:</li>
+  <ul>
+    <li>Here is some latin text:</li>
+      <ul>
+        <li>Ac tristique libero volutpat at</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit</li>
+      </ul>
+    <li>Very easy!</li>
+  </ul>
+</ul>
+<h2>Ordered</h2>
+<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+</ol>
+```
+
+###### notes.markdown
+```{md}
+# Lists
+
+## Unordered
+
+* Create a list by starting a line with `+`, `-`, or `*`
+* Sub-lists are made by indenting 2 spaces:
+    * Here is some latin text:
+        * Ac tristique libero volutpat at
+        * Facilisis in pretium nisl aliquet
+        * Nulla volutpat aliquam velit
+    * Very easy!
+
+## Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+```
 
 ###### rectangle.html
 ```{html}
@@ -550,12 +609,12 @@ $("#calcButton").click(() => {
 #### Thursday, 10/10
 * Questions from the homework, J10 due tonight
     + [CodePen Exercise&mdash;Converting binary to decimal](https://codepen.io/cupp/pen/EgyYVX)
-* In-classProject using HAML and Bootcamp
+* In-classProject using HAML and Bootstrap
   
 ### Week Eight
 #### Monday, 10/14
 * Questions from the homework, J11 due tonight
-    + CodePen Exercise involving HAML and Bootcamp&mdash;TBA
+    + CodePen Exercise involving HAML and Bootstrap&mdash;TBA
 
 #### Tuesday, 10/15
 

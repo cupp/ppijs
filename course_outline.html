@@ -874,8 +874,71 @@ Coming soon
 <div id="tuesday-108" class="section level4">
 <h4>Tuesday, 10/8</h4>
 <ul>
-<li>Introduction to HAML and Bootcamp</li>
+<li>HTML Preprocessors
+<ul>
+<li>Markdown
+<ul>
+<li>Reduces bulkiness of HTML tag notation (see example below).</li>
+<li>Simpler Markdown is converted into HTML before web page is loaded.</li>
+<li>Popular for text content authors (i.e. blogs)</li>
+<li>Not used in this course.</li>
+</ul></li>
+<li>HAML—<strong>H</strong>TML <strong>A</strong>bstraction <strong>M</strong>arkup <strong>L</strong>anguage
+<ul>
+<li>Same idea as Markdown, but specialized for coding</li>
+<li>Shortcuts optimized for divs, classes, and ids.</li>
+<li><code>div</code> is the default tag</li>
+<li><code>%</code> used to identify other tags</li>
+<li>Matches CSS notation for id (<code>#</code>) and class (<code>.</code>) attributes.</li>
+<li>Other attributes identified via object notation.</li>
+<li>See rectangle app below.</li>
+</ul></li>
+</ul></li>
 </ul>
+<div id="notes.html" class="section level6">
+<h6>notes.html</h6>
+<pre class="html"><code>&lt;h1&gt;Lists&lt;/h1&gt;
+&lt;h2&gt;Unordered&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a list by starting a line with &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, or &lt;code&gt;*&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Sub-lists are made by indenting 2 spaces:&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Here is some latin text:&lt;/li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+        &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+        &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;li&gt;Very easy!&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ordered&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</div>
+<div id="notes.markdown" class="section level6">
+<h6>notes.markdown</h6>
+<pre class="md"><code># Lists
+
+## Unordered
+
+* Create a list by starting a line with `+`, `-`, or `*`
+* Sub-lists are made by indenting 2 spaces:
+    * Here is some latin text:
+        * Ac tristique libero volutpat at
+        * Facilisis in pretium nisl aliquet
+        * Nulla volutpat aliquam velit
+    * Very easy!
+
+## Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa</code></pre>
+</div>
 <div id="rectangle.html" class="section level6">
 <h6>rectangle.html</h6>
 <pre class="html"><code>&lt;div class=&quot;container&quot;&gt;
@@ -999,7 +1062,7 @@ $("#calcButton").click(() => {
 <ul>
 <li><a href="https://codepen.io/cupp/pen/EgyYVX">CodePen Exercise—Converting binary to decimal</a></li>
 </ul></li>
-<li>In-classProject using HAML and Bootcamp</li>
+<li>In-classProject using HAML and Bootstrap</li>
 </ul>
 </div>
 </div>
@@ -1010,7 +1073,7 @@ $("#calcButton").click(() => {
 <ul>
 <li>Questions from the homework, J11 due tonight
 <ul>
-<li>CodePen Exercise involving HAML and Bootcamp—TBA</li>
+<li>CodePen Exercise involving HAML and Bootstrap—TBA</li>
 </ul></li>
 </ul>
 </div>
