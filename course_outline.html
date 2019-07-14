@@ -1062,7 +1062,11 @@ $("#calcButton").click(() => {
 <ul>
 <li><a href="https://codepen.io/cupp/pen/EgyYVX">CodePen Exercise—Converting binary to decimal</a></li>
 </ul></li>
-<li>In-classProject using HAML and Bootstrap</li>
+<li>Event loops
+<ul>
+<li><code>setTimer()</code></li>
+<li><code>setInterval()</code></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -1073,9 +1077,56 @@ $("#calcButton").click(() => {
 <ul>
 <li>Questions from the homework, J11 due tonight
 <ul>
-<li>CodePen Exercise involving HAML and Bootstrap—TBA</li>
+<li><a href="https://codepen.io/cupp/pen/xoNqmg">CodePen Exercise—Countdown</a></li>
 </ul></li>
 </ul>
+<div id="countdown.js" class="section level6">
+<h6>countdown.js</h6>
+<pre class="js"><code>var timer, n, grad, yellow;
+
+function updateOutput() {
+  $(&quot;#out&quot;).html(n);
+  $(&quot;#out&quot;).css(&quot;color&quot;,&quot;rgb(255,&quot; + yellow + &quot;,0)&quot;);
+  n--;
+  yellow += grad; 
+  if (n &lt; 0) {
+    clearInterval(timer);
+    $(&quot;#out&quot;).html(&quot;BOOOOM!&quot;);
+    $(&quot;#out&quot;).css(&quot;color&quot;,&quot;black&quot;);
+    $(&quot;#out&quot;).css(&quot;background-color&quot;, &quot;yellow&quot;)
+  }
+}
+
+$(&quot;#goButton&quot;).click(() =&gt; {
+  n = Number($(&quot;#numInput&quot;).val());
+  timer = setInterval(updateOutput, 500);
+  grad = 255/n;
+  yellow = 0;
+});</code></pre>
+<script type="text/javascript">
+var timer, n, grad, yellow;
+
+function updateOutput() {
+  $("#out").html(n);
+  $("#out").css("color","rgb(255," + yellow + ",0)");
+  n--;
+  yellow += grad; 
+  if (n < 0) {
+    clearInterval(timer);
+    $("#out").html("BOOOOM!");
+    $("#out").css("color","black");
+    $("#out").css("background-color", "yellow")
+  }
+}
+
+$("#goButton").click(() => {
+  n = Number($("#numInput").val());
+  timer = setInterval(updateOutput, 500);
+  grad = 255/n;
+  yellow = 0;
+});
+</script>
+</div>
 </div>
 <div id="tuesday-1015" class="section level4">
 <h4>Tuesday, 10/15</h4>

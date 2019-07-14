@@ -609,12 +609,39 @@ $("#calcButton").click(() => {
 #### Thursday, 10/10
 * Questions from the homework, J10 due tonight
     + [CodePen Exercise&mdash;Converting binary to decimal](https://codepen.io/cupp/pen/EgyYVX)
-* In-classProject using HAML and Bootstrap
+* Event loops
+    + `setTimer()`
+    + `setInterval()`
   
 ### Week Eight
 #### Monday, 10/14
 * Questions from the homework, J11 due tonight
-    + CodePen Exercise involving HAML and Bootstrap&mdash;TBA
+    + [CodePen Exercise&mdash;Countdown](https://codepen.io/cupp/pen/xoNqmg)
+
+###### countdown.js
+```{js}
+var timer, n, grad, yellow;
+
+function updateOutput() {
+  $("#out").html(n);
+  $("#out").css("color","rgb(255," + yellow + ",0)");
+  n--;
+  yellow += grad; 
+  if (n < 0) {
+    clearInterval(timer);
+    $("#out").html("BOOOOM!");
+    $("#out").css("color","black");
+    $("#out").css("background-color", "yellow")
+  }
+}
+
+$("#goButton").click(() => {
+  n = Number($("#numInput").val());
+  timer = setInterval(updateOutput, 500);
+  grad = 255/n;
+  yellow = 0;
+});
+```
 
 #### Tuesday, 10/15
 
