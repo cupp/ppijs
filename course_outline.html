@@ -1066,6 +1066,7 @@ $("#calcButton").click(() => {
 <ul>
 <li><code>setTimer()</code></li>
 <li><code>setInterval()</code></li>
+<li><code>clearInterval()</code></li>
 </ul></li>
 </ul>
 </div>
@@ -1080,53 +1081,6 @@ $("#calcButton").click(() => {
 <li><a href="https://codepen.io/cupp/pen/xoNqmg">CodePen Exercise—Countdown</a></li>
 </ul></li>
 </ul>
-<div id="countdown.js" class="section level6">
-<h6>countdown.js</h6>
-<pre class="js"><code>var timer, n, grad, yellow;
-
-function updateOutput() {
-  $(&quot;#out&quot;).html(n);
-  $(&quot;#out&quot;).css(&quot;color&quot;,&quot;rgb(255,&quot; + yellow + &quot;,0)&quot;);
-  n--;
-  yellow += grad; 
-  if (n &lt; 0) {
-    clearInterval(timer);
-    $(&quot;#out&quot;).html(&quot;BOOOOM!&quot;);
-    $(&quot;#out&quot;).css(&quot;color&quot;,&quot;black&quot;);
-    $(&quot;#out&quot;).css(&quot;background-color&quot;, &quot;yellow&quot;)
-  }
-}
-
-$(&quot;#goButton&quot;).click(() =&gt; {
-  n = Number($(&quot;#numInput&quot;).val());
-  timer = setInterval(updateOutput, 500);
-  grad = 255/n;
-  yellow = 0;
-});</code></pre>
-<script type="text/javascript">
-var timer, n, grad, yellow;
-
-function updateOutput() {
-  $("#out").html(n);
-  $("#out").css("color","rgb(255," + yellow + ",0)");
-  n--;
-  yellow += grad; 
-  if (n < 0) {
-    clearInterval(timer);
-    $("#out").html("BOOOOM!");
-    $("#out").css("color","black");
-    $("#out").css("background-color", "yellow")
-  }
-}
-
-$("#goButton").click(() => {
-  n = Number($("#numInput").val());
-  timer = setInterval(updateOutput, 500);
-  grad = 255/n;
-  yellow = 0;
-});
-</script>
-</div>
 </div>
 <div id="tuesday-1015" class="section level4">
 <h4>Tuesday, 10/15</h4>
@@ -1136,9 +1090,8 @@ $("#goButton").click(() => {
 <ul>
 <li>Questions from the homework, J12 due tonight
 <ul>
-<li>Written loop problems</li>
-<li><code>ddb(cost: number, n: number, k: number): number</code></li>
-<li><code>euler(k: number): number</code></li>
+<li><a href="https://codepen.io/cupp/pen/zVVbQM">CodePen Exercise—Double Declining Balance function</a></li>
+<li><a href="https://codepen.io/cupp/pen/EBqMmb">CodePen Exercise—Double Declining Balance table</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1150,9 +1103,8 @@ $("#goButton").click(() => {
 <ul>
 <li>Questions from the homework, J13 due tonight
 <ul>
-<li><code>dec2bin(dec: number): string</code></li>
-<li><code>bin2dec(bin: string): number</code></li>
-<li><code>dec2hex(dec: number): string</code></li>
+<li><a href="https://codepen.io/cupp/pen/LwPPoz?editors=1111">CodePen Exercise—Converting Decimal to Hexadecimal</a></li>
+<li><a href="https://codepen.io/cupp/pen/YmzqpG?editors=1111">CodePen Exercise—Converting Hexadecimal to Decimal2hex</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1164,9 +1116,8 @@ $("#goButton").click(() => {
 <ul>
 <li>Questions from the homework, J14 due tonight
 <ul>
-<li>Written loop problems</li>
-<li><code>ddb(cost: number, n: number, k: number): number</code></li>
-<li><code>euler(k: number): number</code></li>
+<li><a href="https://codepen.io/cupp/pen/GVRzPM">CodePen Exercise—Determining Primeness</a></li>
+<li><a href="https://codepen.io/cupp/pen/qeBwdK">CodePen Exercise—Computing Euler’s Number</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1178,9 +1129,9 @@ $("#goButton").click(() => {
 <ul>
 <li>Questions from the homework, J15 due tonight
 <ul>
-<li><code>fib(n: number): number[]</code></li>
-<li><code>evenSum(v: number[]): number</code></li>
-<li><code>negCount(v: number[]): number</code></li>
+<li><a href="https://codepen.io/cupp/pen/gVbYgg">CodePen Exercise—The Fibonacci Sequence</a></li>
+<li><a href="https://codepen.io/cupp/pen/RXNwQJ">CodePen Exercise—Sum of Evens</a></li>
+<li><a href="https://codepen.io/cupp/pen/WVbbMo">CodePen Exercise—Negative Count</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1193,9 +1144,8 @@ $("#goButton").click(() => {
 <li>Questions from the homework, J16 due tonight
 <ul>
 <li>Written loop problems</li>
-<li><code>isLinear(v: number[]): boolean</code></li>
-<li><code>rotateLeft(v: number[]): number[]</code></li>
-<li><code>rotateRight(v: number[]): number[]</code></li>
+<li><a href="https://codepen.io/cupp/pen/RXNWQJ">CodePen Exercise—Linear Sequences</a></li>
+<li><a href="https://codepen.io/cupp/pen/bXNEMe">CodePen Exercise—Longest Run</a></li>
 </ul></li>
 </ul>
 </div>

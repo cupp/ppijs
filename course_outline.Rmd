@@ -612,75 +612,47 @@ $("#calcButton").click(() => {
 * Event loops
     + `setTimer()`
     + `setInterval()`
+    + `clearInterval()`
   
 ### Week Eight
 #### Monday, 10/14
 * Questions from the homework, J11 due tonight
     + [CodePen Exercise&mdash;Countdown](https://codepen.io/cupp/pen/xoNqmg)
 
-###### countdown.js
-```{js}
-var timer, n, grad, yellow;
-
-function updateOutput() {
-  $("#out").html(n);
-  $("#out").css("color","rgb(255," + yellow + ",0)");
-  n--;
-  yellow += grad; 
-  if (n < 0) {
-    clearInterval(timer);
-    $("#out").html("BOOOOM!");
-    $("#out").css("color","black");
-    $("#out").css("background-color", "yellow")
-  }
-}
-
-$("#goButton").click(() => {
-  n = Number($("#numInput").val());
-  timer = setInterval(updateOutput, 500);
-  grad = 255/n;
-  yellow = 0;
-});
-```
-
 #### Tuesday, 10/15
 
 #### Thursday, 10/17
 * Questions from the homework, J12 due tonight
-    + Written loop problems
-    + `ddb(cost: number, n: number, k: number): number`
-    + `euler(k: number): number`
+    + [CodePen Exercise&mdash;Double Declining Balance function](https://codepen.io/cupp/pen/zVVbQM)
+    + [CodePen Exercise&mdash;Double Declining Balance table](https://codepen.io/cupp/pen/EBqMmb)
   
 ### Week Nine
 #### Monday, 10/21
 * Questions from the homework, J13 due tonight
-    + `dec2bin(dec: number): string`
-    + `bin2dec(bin: string): number`
-    + `dec2hex(dec: number): string`
+    + [CodePen Exercise&mdash;Converting Decimal to Hexadecimal](https://codepen.io/cupp/pen/LwPPoz?editors=1111)
+    + [CodePen Exercise&mdash;Converting Hexadecimal to Decimal2hex](https://codepen.io/cupp/pen/YmzqpG?editors=1111)
 
 #### Tuesday, 10/22
 
 #### Thursday, 10/24
 * Questions from the homework, J14 due tonight
-    + Written loop problems
-    + `ddb(cost: number, n: number, k: number): number`
-    + `euler(k: number): number`
+    + [CodePen Exercise&mdash;Determining Primeness](https://codepen.io/cupp/pen/GVRzPM)
+    + [CodePen Exercise&mdash;Computing Euler's Number](https://codepen.io/cupp/pen/qeBwdK)
   
 ### Week Ten
 #### Monday, 10/28
 * Questions from the homework, J15 due tonight
-    + `fib(n: number): number[]`
-    + `evenSum(v: number[]): number`
-    + `negCount(v: number[]): number`
+    + [CodePen Exercise&mdash;The Fibonacci Sequence](https://codepen.io/cupp/pen/gVbYgg)
+    + [CodePen Exercise&mdash;Sum of Evens](https://codepen.io/cupp/pen/RXNwQJ)
+    + [CodePen Exercise&mdash;Negative Count](https://codepen.io/cupp/pen/WVbbMo)
 
 #### Tuesday, 10/29
 
 #### Thursday, 10/31
 * Questions from the homework, J16 due tonight
     + Written loop problems
-    + `isLinear(v: number[]): boolean`
-    + `rotateLeft(v: number[]): number[]`
-    + `rotateRight(v: number[]): number[]`
+    + [CodePen Exercise&mdash;Linear Sequences](https://codepen.io/cupp/pen/RXNWQJ)
+    + [CodePen Exercise&mdash;Longest Run](https://codepen.io/cupp/pen/bXNEMe)
 
 ### Week Eleven
 #### Monday, 11/4
