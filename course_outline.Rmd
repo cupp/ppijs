@@ -649,10 +649,7 @@ $("#calcButton").click(() => {
 #### Tuesday, 10/29
 
 #### Thursday, 10/31
-* Questions from the homework, J16 due tonight
-    + Written loop problems
-    + [CodePen Exercise&mdash;Linear Sequences](https://codepen.io/cupp/pen/RXNWQJ)
-    + [CodePen Exercise&mdash;Longest Run](https://codepen.io/cupp/pen/bXNEMe)
+* No assignment due, Happy Halloween.
 
 ### Week Eleven
 #### Monday, 11/4
@@ -665,32 +662,35 @@ $("#calcButton").click(() => {
 
 ### Week Twelve
 #### Monday, 11/11
-* Questions from the homework, J17 due tonight
-    + TBA    
+* Questions from the homework, J16 due tonight
+    + [CodePen Exercise&mdash;Linear Sequences](https://codepen.io/cupp/pen/RXNWQJ)
+    + [CodePen Exercise&mdash;Longest Run](https://codepen.io/cupp/pen/bXNEMe)
     
 #### Tuesday, 11/12
 
 #### Thursday, 11/14
-* Questions from the homework, J18 due tonight
-    + `pig` game project
+* Questions from the homework, J17 due tonight
+    + `rectangleWithBorder(rows: number, cols: number): string`
+    + `chessBoard(rows: number): string`    
 
 ### Week Thirteen
 #### Monday, 11/18
-* Questions from the homework, J19 due tonight
-    + `rectangleWithBorder(rows: number, cols: number): string`
+* Questions from the homework, J18 due tonight
     + `htmlRectangleWithBorder(rows: number, cols: number): void`
+    + `htmlchessBoard(rows: number): void`
     
 #### Tuesday, 11/19
 
 #### Thursday, 11/21
-* Questions from the homework, J20 due tonight
+* Questions from the homework, J19 due tonight
+    + `scalarMult(x: number, y: number[][]): number[][]`
     + `transpose(x: number[][]): number[][]`
-    + `numLarger(x: number[][], y: number[][]): number`
-
+    
 ### Week Fourteen
 #### Monday, 11/25
-* Questions from the homework, J21 due tonight
-    + Network client project (subject to change)
+* Questions from the homework, J20 due tonight
+    + `numLarger(x: number[][], y: number[][]): number`
+    + `matrixMult(x: number[][], y: number[][]): number[][]`
     
 #### Tuesday, 11/26
 
@@ -699,11 +699,10 @@ $("#calcButton").click(() => {
 
 ### Week Fifteen
 #### Monday, 12/2
-
+    + K-Means clustering problem?
 #### Tuesday, 12/3
 
 #### Thursday, 12/5
-* Questions from the homework, J22 due tonight
-    + Text mining project (subject to change)
+* No assignment due
 
 ### FINAL EXAM, Week of 12/9, Dates TBA
