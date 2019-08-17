@@ -670,27 +670,27 @@ $("#calcButton").click(() => {
 
 #### Thursday, 11/14
 * Questions from the homework, J17 due tonight
-    + `rectangleWithBorder(rows: number, cols: number): string`
-    + `chessBoard(rows: number): string`    
+    + [CodePen Exercise&mdash;Rectangle with Border](https://codepen.io/cupp/pen/yLBJVVz)
+    + [CodePen Exercise&mdash;Chessboard](https://codepen.io/cupp/pen/gOYMLvr)    
 
 ### Week Thirteen
 #### Monday, 11/18
 * Questions from the homework, J18 due tonight
-    + `htmlRectangleWithBorder(rows: number, cols: number): void`
-    + `htmlchessBoard(rows: number): void`
+    + [CodePen Exercise&mdash;Rectangle with Border (Canvas)](https://codepen.io/cupp/pen/JjPKbqg)
+    + [CodePen Exercise&mdash;Chessboard (Canvas)](https://codepen.io/cupp/pen/aboZpLO)
     
 #### Tuesday, 11/19
 
 #### Thursday, 11/21
 * Questions from the homework, J19 due tonight
-    + `scalarMult(x: number, y: number[][]): number[][]`
-    + `transpose(x: number[][]): number[][]`
+    + [CodePen Exercise&mdash;Scalar Multiplication](https://codepen.io/cupp/pen/aboZLVQ)
+    + [CodePen Exercise&mdash;Matrix Transposition](https://codepen.io/cupp/pen/NWKrXpZ)
     
 ### Week Fourteen
 #### Monday, 11/25
 * Questions from the homework, J20 due tonight
-    + `numLarger(x: number[][], y: number[][]): number`
-    + `matrixMult(x: number[][], y: number[][]): number[][]`
+    + [CodePen Exercise&mdash;Function numLarger](https://codepen.io/cupp/pen/aboZExq)
+    + [CodePen Exercise&mdash;Matrix Multiplication](https://codepen.io/cupp/pen/WNexMjR)
     
 #### Tuesday, 11/26
 
