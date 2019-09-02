@@ -306,23 +306,6 @@ $(document).ready(function () {
 <li>cannot change in TypeScript</li>
 </ul></li>
 </ul></li>
-<li>Constants
-<ul>
-<li><code>const TAX_RATE = 0.095;</code></li>
-<li>Same as <code>let</code> but TAX_RATE cannot be changed</li>
-<li>All caps is standard convention for names of constants</li>
-<li><code>var x = 4;</code> is for backwards compatibility, do not use</li>
-</ul></li>
-</ul></li>
-<li>Arithmetic Operators (in order of precedence)
-<ul>
-<li>unary plus <code>+</code>, unary negation <code>-</code></li>
-<li>multiplication <code>*</code>, division <code>\</code>, modulus <code>%</code></li>
-<li>addition <code>+</code>, subtraction <code>-</code>
-<ul>
-<li>Note: no exponentiation operator, use <code>Math.pow(x, 2)</code></li>
-<li>Note: no integer division operator, use <code>Math.floor(x / 2)</code>, see next lecture</li>
-</ul></li>
 </ul></li>
 <li><p>First programs</p></li>
 </ul>
@@ -367,10 +350,39 @@ console.log("Hello, world!\n");
 <div id="tuesday-93" class="section level4">
 <h4>Tuesday, 9/3</h4>
 <ul>
+<li>JavaScript Constants - <code>const TAX_RATE = 0.095;</code> - Same as <code>let</code> but TAX_RATE cannot be changed - Note: this is an upcoming feature of ECMAScript 6. Most browsers do not yet implement this feature (i.e. you can change a constant). We chose to program with constants to prepare this transition and to foster good programming habits. - All caps is standard convention for names of constants - <code>var x = 4;</code> is for backwards compatibility, do not use</li>
+<li>Arithmetic Operators (in order of precedence)
+<ul>
+<li>unary plus <code>+</code>, unary negation <code>-</code></li>
+<li>multiplication <code>*</code>, division <code>\</code>, modulus <code>%</code></li>
+<li>addition <code>+</code>, subtraction <code>-</code>
+<ul>
+<li>Note: no exponentiation operator, use <code>Math.pow(x, 2)</code></li>
+<li>Note: no integer division operator, use <code>Math.floor(x / 2)</code>, see next lecture</li>
+</ul></li>
+</ul></li>
 <li>User-defined functions
 <ul>
-<li>Function syntax</li>
-<li>Function literals</li>
+<li>Function syntax
+<ul>
+<li>See examples below</li>
+<li>function keyword</li>
+<li>function name</li>
+<li>parameter list
+<ul>
+<li>In standard JavaScript, types are not specified</li>
+<li>In TypeScript (which we are using), types are specified</li>
+<li>comma-separated if multiple parameters</li>
+<li>It is legal to have no parameters</li>
+</ul></li>
+<li>return type (Note: additional <code>void</code> return type for functions that return no value)</li>
+</ul></li>
+<li>Function literals
+<ul>
+<li>See examples below</li>
+<li>Evaluates to a function object that can be assigned to a variable</li>
+<li>Can also be left unnamed if the function will not be reused.</li>
+</ul></li>
 </ul></li>
 <li>Sample code</li>
 </ul>
